@@ -99,7 +99,7 @@ function Photolist({ category }) {
         },
     ]); 
     const currentPhotos = photos.filter((photo) => photo.category === category);
-    console.log(currentPhotos, currentPhotos.length);
+    // console.log(currentPhotos, currentPhotos.length);
     return(
         <div className='flex-row'>
             {currentPhotos.map((photo, index) => (
