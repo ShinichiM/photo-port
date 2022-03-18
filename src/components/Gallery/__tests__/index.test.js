@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Gallery from '..'
 
@@ -20,7 +20,8 @@ describe('Gallery testing', () => {
         expect(asFragment()).toMatchSnapshot();
     });
     it('renders titles', () => {
-        const { getByTestId } = render(<Gallery currentCategory={portrait}></Gallery>)
-        expect(getByTestId('h1tag')).toHaveTextContent('Portraits');
+        render(<Gallery currentCategory={portrait}></Gallery>)
+        const element = screen.getByTestId('h1tag');
+        expect(element).toHaveTextContent('Portraits');
     })
 })

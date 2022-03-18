@@ -6,10 +6,10 @@ import Photolist from '..';
 afterEach(cleanup);
 
 describe('Photolist Testing', () => {
-    const category = {
-        name: 'portrait',
-        description: 'Portraits of animals'
-    };
+    // const category = {
+    //     name: 'portrait',
+    //     description: 'Portraits of animals'
+    // };
 
     it('renders', () => {
         render(<Photolist></Photolist>);
